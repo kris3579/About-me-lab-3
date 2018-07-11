@@ -1,0 +1,39 @@
+body {
+    background-color: #bdbdbd;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#check1 {
+    width: 50;
+    display: none;
+    padding: 45px;
+}
+
+#check2 {
+    width: 50;
+    display: none;
+    padding: 45px;
+}
+
+#check3 {
+    width: 50;
+    display: none;
+    padding: 45px;
+}
+
+#check4 {
+    width: 50;
+    display: none;
+    padding: 45px;
+}
+
+#check5 {
+    width: 50;
+    display: none;
+    padding: 45px;
+}
