@@ -58,3 +58,17 @@ if (question5.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
     alert('Please enter Y or N');
 }
 console.log("Q5 answer",question5)
+
+var question6 = prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?')
+
+for (var i = 0; i < 3; i++) {
+    if (question6 === 20) {
+        alert('Correct!')
+    } else if (question6 !== 20) {
+        alert('Not quite, try again!')
+        i++;
+    } else (question6 !== 20 && i === 3) {
+        alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
+        break;
+    }
+}
