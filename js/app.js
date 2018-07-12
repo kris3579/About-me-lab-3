@@ -80,20 +80,23 @@ function q4() {
 }
 
 q4();
-var question5 = prompt('Does Kris have an endless stomach?');
 
-if (question5.toUpperCase() === 'Y' || question5.toUpperCase() === 'YES') {
-  alert('Correct!');
-  document.getElementById('check5').style.display = 'inline-block';
-  tally++;
-  console.log('number of tallies', tally);
-} else if (question5.toUpperCase() === 'N' || question5.toUpperCase() === 'NO') {
-  alert('Incorrect');
-} else {
-  alert('Please enter Y or N');
+function q5() {
+  var question5 = prompt('Does Kris have an endless stomach?');
+
+  if (question5.toUpperCase() === 'Y' || question5.toUpperCase() === 'YES') {
+    alert('Correct!');
+    document.getElementById('check5').style.display = 'inline-block';
+    tally++;
+    console.log('number of tallies', tally);
+  } else if (question5.toUpperCase() === 'N' || question5.toUpperCase() === 'NO') {
+    alert('Incorrect');
+  } else {
+    alert('Please enter Y or N');
+  }
+  console.log('Q5 answered', question5);
 }
-console.log('Q5 answered', question5);
-
+q5();
 //QUESTION 6
 var wrongAnswer = 0;
 var rightAnswer = 20;
