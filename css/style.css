@@ -30,34 +30,46 @@ aside {
 }    
 
 #check1 {
-    width: 15%;
+    width: 10%;
     display: none;
     padding: 2%;
 }
 
 #check2 {
-    width: 15%;
+    width: 10%;
     display: none;
     padding: 2%;
 }
 
 #check3 {
-    width: 15%;
+    width: 10%;
     display: none;
     padding: 2%;
 }
 
 #check4 {
-    width: 15%;
+    width: 10%;
     display: none;
     padding: 2%;
 }
 
 #check5 {
-    width: 15%;
+    width: 10%;
     display: none;
     padding: 2%;
 } 
+
+#check6 {
+    width: 10%;
+    display: none;
+    padding: 2%;
+}
+
+#check7 {
+    width: 10%;
+    display: none;
+    padding: 2%;
+}
 
 #orderedList {
     margin-left: 50px;
