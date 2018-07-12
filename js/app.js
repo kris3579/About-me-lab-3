@@ -3,28 +3,34 @@
 
 var tally = 0;
 var username = prompt('Hello, and welcome to Kris\'s About-me page! What is your name?');
-var question1 = prompt('Is Kris a Dog person?');
 
-if (question1.toUpperCase() === 'N' || question1.toUpperCase() === 'NO') {
-  alert('Correct!');
-  document.getElementById('check1').style.display = 'inline-block';
-  tally++;
-  console.log('number of tallies', tally);
-} else if (question1.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
-  alert('Incorrect');
-} else {
-  alert('Please enter Y or N');
+function q1() {
+
+  var question1 = prompt('Is Kris a Dog person?');
+
+  if (question1.toUpperCase() === 'N' || question1.toUpperCase() === 'NO') {
+    alert('Correct!');
+    document.getElementById('check1').style.display = 'inline-block';
+    tally++;
+    console.log('number of tallies', tally);
+  } else if (question1.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
+    alert('Incorrect');
+  } else {
+    alert('Please enter Y or N');
+  }
+  console.log('Q1 answered', question1);
 }
-console.log('Q1 answered', question1);
+
+q1();
 
 var question2 = prompt('Was Kris born in Seattle?');
 
-if (question2.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
+if (question2.toUpperCase() === 'Y' || question2.toUpperCase() === 'YES') {
   alert('Correct!');
   document.getElementById('check2').style.display = 'inline-block';
   tally++;
   console.log('number of tallies', tally);
-} else if (question2.toUpperCase() === 'N' || question1.toUpperCase() === 'NO') {
+} else if (question2.toUpperCase() === 'N' || question2.toUpperCase() === 'NO') {
   alert('Incorrect');
 } else {
   alert('Please enter Y or N');
@@ -33,12 +39,12 @@ console.log('Q2 answered',question2);
 
 var question3 = prompt('Would Kris sleep all day instead of being here if he could?');
 
-if (question3.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
+if (question3.toUpperCase() === 'Y' || question3.toUpperCase() === 'YES') {
   alert('Correct!');
   document.getElementById('check3').style.display = 'inline-block';
   tally++;
   console.log('number of tallies', tally);
-} else if (question3.toUpperCase() === 'N' || question1.toUpperCase() === 'NO') {
+} else if (question3.toUpperCase() === 'N' || question3.toUpperCase() === 'NO') {
   alert('Incorrect');
 } else {
   alert('Please enter Y or N');
@@ -47,12 +53,12 @@ console.log('Q3 answered', question3);
 
 var question4 = prompt('Is Kris fond of coffee?');
 
-if (question4.toUpperCase() === 'N' || question1.toUpperCase() === 'NO') {
+if (question4.toUpperCase() === 'N' || question4.toUpperCase() === 'NO') {
   alert('Correct!');
   document.getElementById('check4').style.display = 'inline-block';
   tally++;
   console.log('number of tallies', tally);
-} else if (question4.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
+} else if (question4.toUpperCase() === 'Y' || question4.toUpperCase() === 'YES') {
   alert('Incorrect');
 } else {
   alert('Please enter Y or N');
@@ -61,12 +67,12 @@ console.log('Q4 answered', question4);
 
 var question5 = prompt('Does Kris have an endless stomach?');
 
-if (question5.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
+if (question5.toUpperCase() === 'Y' || question5.toUpperCase() === 'YES') {
   alert('Correct!');
   document.getElementById('check5').style.display = 'inline-block';
   tally++;
   console.log('number of tallies', tally);
-} else if (question5.toUpperCase() === 'N' || question1.toUpperCase() === 'NO') {
+} else if (question5.toUpperCase() === 'N' || question5.toUpperCase() === 'NO') {
   alert('Incorrect');
 } else {
   alert('Please enter Y or N');
