@@ -1,6 +1,5 @@
 'use strict';
 
-
 var tally = 0;
 var username = prompt('Hello, and welcome to Kris\'s About-me page! What is your name?');
 
@@ -41,7 +40,6 @@ function q2() {
 }
 
 q2();
-
 
 function q3() {
 
@@ -97,6 +95,7 @@ function q5() {
   console.log('Q5 answered', question5);
 }
 q5();
+
 //QUESTION 6
 var wrongAnswer = 0;
 var rightAnswer = 20;
@@ -127,7 +126,6 @@ function q6() {
 }
 
 q6();
-
 
 var question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
 var canada = false;
@@ -168,7 +166,6 @@ function q7() {
 }
 
 q7();
-
 
 if (tally <= 4) {
   alert('Nice try ' + username + ' you got ' + tally + ' out of 7 questions correct.');
