@@ -88,9 +88,10 @@ while (wrongAnswer < 4) {
     
 
 var question7 = prompt('Can you guess a country that Kris has visited?');
-
-
-var countryList = [canada, italy, netherlands];
+//var canada = true;
+//var italy = true;
+//var netherlands = true;
+var countryList = ['canada', 'italy', 'netherlands'];
 
 for (var attempts = 0; attempts < 6; attempts++) {
     for (var i = 0; i < countryList.length; i++) {
@@ -103,6 +104,9 @@ for (var attempts = 0; attempts < 6; attempts++) {
             console.log ('Incorrect attempts', attempts);
             alert('No, I haven\'t been there. (Yet!) Try again!');
             question7 = prompt('Can you guess a country that Kris has visited?');
+        } else if (attempts >= 6) {
+            alert('Too bad, your out of tries... I have been to Italy, The Netherlands, and Canada.')
+            break;
         }
     }
 
