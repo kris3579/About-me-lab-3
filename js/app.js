@@ -23,19 +23,26 @@ function q1() {
 
 q1();
 
-var question2 = prompt('Was Kris born in Seattle?');
+function q2() {
 
-if (question2.toUpperCase() === 'Y' || question2.toUpperCase() === 'YES') {
-  alert('Correct!');
-  document.getElementById('check2').style.display = 'inline-block';
-  tally++;
-  console.log('number of tallies', tally);
-} else if (question2.toUpperCase() === 'N' || question2.toUpperCase() === 'NO') {
-  alert('Incorrect');
-} else {
-  alert('Please enter Y or N');
+  var question2 = prompt('Was Kris born in Seattle?');
+
+  if (question2.toUpperCase() === 'Y' || question2.toUpperCase() === 'YES') {
+    alert('Correct!');
+    document.getElementById('check2').style.display = 'inline-block';
+    tally++;
+    console.log('number of tallies', tally);
+  } else if (question2.toUpperCase() === 'N' || question2.toUpperCase() === 'NO') {
+    alert('Incorrect');
+  } else {
+    alert('Please enter Y or N');
+  }
+  console.log('Q2 answered',question2);
 }
-console.log('Q2 answered',question2);
+
+q2();
+
+
 
 var question3 = prompt('Would Kris sleep all day instead of being here if he could?');
 
