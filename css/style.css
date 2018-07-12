@@ -39,7 +39,7 @@ aside {
 
 #ulist {
     width: 40%;
-    margin-left: 50px;
+    margin-left: 200px;
     padding: 15px;
     border-width: 5px;
     border-style: groove;
@@ -49,7 +49,7 @@ aside {
 #link {
     width: 40%;
     margin-top: 25px;
-    margin-left: 50px;
+    margin-left: 200px;
     padding: 15px;
     border-width: 3px;
     border-style: solid;
