@@ -77,7 +77,7 @@ while (wrongAnswer < 4) {
         alert('Ramen is better than that! Try again.');
         //question6 = prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?');
     } else if (userGuess === rightAnswer) {
-        alert('Exactly! (Maybe)')
+        alert('Exactly! (Maybe)');
         break;
     } else {
         alert('You never guessed a number!');
@@ -87,4 +87,30 @@ while (wrongAnswer < 4) {
 }  
     
 
-question7 = prompt('')
+var question7 = prompt('Can you guess a country that Kris has visited?');
+
+
+var countryList = [canada, italy, netherlands];
+
+for (var attempts = 0; attempts < 6; attempts++) {
+    for (var i = 0; i < countryList.length; i++) {
+        if (question7 === countryList[i]) {
+            console.log ('Correctly input answer', countryList[i]);
+            alert('Yes, I have been there! I have been too Italy, The Netherlands, and Canada.' );
+            break;
+        }
+        if (question7 !== countryList[i]) {
+            console.log ('Incorrect attempts', attempts);
+            alert('No, I haven\'t been there. (Yet!) Try again!');
+            question7 = prompt('Can you guess a country that Kris has visited?');
+        }
+    }
+
+
+
+
+}
+
+
+
+
