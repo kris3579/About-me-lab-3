@@ -13,7 +13,7 @@ if (question1.toUpperCase() === 'N' || question1.toUpperCase() === 'NO') {
 } else {
     alert('Please enter Y or N');
 }
-console.log("Q1 answer", question1);
+console.log("Q1 answered", question1);
 
 var question2 = prompt('Was Kris born in Seattle?');
 
@@ -27,7 +27,7 @@ if (question2.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
 } else {
     alert('Please enter Y or N');
 }
-console.log("Q2 answer",question2);
+console.log("Q2 answered",question2);
 
 var question3 = prompt('Does Kris\'s ancestry include Native American blood?');
 
@@ -41,7 +41,7 @@ if (question3.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
 } else {
     alert('Please enter Y or N');
 }
-console.log("Q3 answer",question3);
+console.log("Q3 answered",question3);
 
 var question4 = prompt('Is Kris fond of coffee?');
 
@@ -55,7 +55,7 @@ if (question4.toUpperCase() === 'N' || question1.toUpperCase() === 'NO') {
 } else {
     alert('Please enter Y or N');
 }
-console.log("Q4 answer",question4);
+console.log("Q4 answered",question4);
 
 var question5 = prompt('Does Kris have an endless stomach?');
 
@@ -69,7 +69,7 @@ if (question5.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
 } else {
     alert('Please enter Y or N');
 }
-console.log("Q5 answer",question5);
+console.log("Q5 answered",question5);
 
 //QUESTION 6
 var wrongAnswer = 0; 
@@ -82,12 +82,10 @@ while (wrongAnswer < 4) {
         wrongAnswer++;
         console.log('how many times answered wrong', wrongAnswer);
         alert('What, thats a crazy amount of ramen! Try again.');
-       // question6 = prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?');
     } else if (userGuess < rightAnswer) {
         wrongAnswer++;       
         console.log('how many times answered wrong', wrongAnswer);
         alert('Ramen is better than that! Try again.');
-        //question6 = prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?');
     } else if (userGuess === rightAnswer) {
         alert('Exactly! (Maybe)');
         document.getElementById("check6").style.display = "inline-block";
