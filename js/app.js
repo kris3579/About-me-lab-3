@@ -1,4 +1,6 @@
-"use strict";
+'use strict';
+
+
 var tally = 0;
 var username = prompt('Hello, and welcome to Kris\'s About-me page! What is your name?');
 var question1 = prompt('Is Kris a Dog person?');
@@ -72,7 +74,7 @@ if (question5.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
 console.log("Q5 answered",question5);
 
 //QUESTION 6
-var wrongAnswer = 0; 
+var wrongAnswer = 0;
 var rightAnswer = 20;
 
 
@@ -83,7 +85,7 @@ while (wrongAnswer < 4) {
         console.log('how many times answered wrong', wrongAnswer);
         alert('What, thats a crazy amount of ramen! Try again.');
     } else if (userGuess < rightAnswer) {
-        wrongAnswer++;       
+        wrongAnswer++;
         console.log('how many times answered wrong', wrongAnswer);
         alert('Ramen is better than that! Try again.');
     } else if (userGuess === rightAnswer) {
@@ -97,8 +99,8 @@ while (wrongAnswer < 4) {
     }
     if (wrongAnswer === 4)
     alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
-}  
-    
+}
+
 
 // var question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
 // var canada = false;
@@ -122,7 +124,7 @@ while (wrongAnswer < 4) {
 //             alert('I have been been there!')
 //             netherlands = true;
 //             break;
-//         } 
+//         }
 //         }
 //     }
 //     if (italy === true || canada === true || netherlands === true) {
