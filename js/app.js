@@ -101,30 +101,32 @@ q5();
 var wrongAnswer = 0;
 var rightAnswer = 20;
 
-
-while (wrongAnswer < 4) {
-  var userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
-  if (userGuess > rightAnswer) {
-    wrongAnswer++;
-    console.log('how many times answered wrong', wrongAnswer);
-    alert('What, thats a crazy amount of ramen! Try again.');
-  } else if (userGuess < rightAnswer) {
-    wrongAnswer++;
-    console.log('how many times answered wrong', wrongAnswer);
-    alert('Ramen is better than that! Try again.');
-  } else if (userGuess === rightAnswer) {
-    alert('Exactly! (Maybe)');
-    document.getElementById('check6').style.display = 'inline-block';
-    tally++;
-    console.log('number of tallies', tally);
-    break;
-  } else {
-    alert('You never guessed a number!');
+function q6() {
+  while (wrongAnswer < 4) {
+    var userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
+    if (userGuess > rightAnswer) {
+      wrongAnswer++;
+      console.log('how many times answered wrong', wrongAnswer);
+      alert('What, thats a crazy amount of ramen! Try again.');
+    } else if (userGuess < rightAnswer) {
+      wrongAnswer++;
+      console.log('how many times answered wrong', wrongAnswer);
+      alert('Ramen is better than that! Try again.');
+    } else if (userGuess === rightAnswer) {
+      alert('Exactly! (Maybe)');
+      document.getElementById('check6').style.display = 'inline-block';
+      tally++;
+      console.log('number of tallies', tally);
+      break;
+    } else {
+      alert('You never guessed a number!');
+    }
+    if (wrongAnswer === 4)
+      alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
   }
-  if (wrongAnswer === 4)
-    alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
 }
 
+q6();
 
 var question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
 var canada = false;
