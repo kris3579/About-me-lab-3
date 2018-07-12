@@ -62,20 +62,24 @@ function q3() {
 
 q3();
 
-var question4 = prompt('Is Kris fond of coffee?');
+function q4() {
 
-if (question4.toUpperCase() === 'N' || question4.toUpperCase() === 'NO') {
-  alert('Correct!');
-  document.getElementById('check4').style.display = 'inline-block';
-  tally++;
-  console.log('number of tallies', tally);
-} else if (question4.toUpperCase() === 'Y' || question4.toUpperCase() === 'YES') {
-  alert('Incorrect');
-} else {
-  alert('Please enter Y or N');
+  var question4 = prompt('Is Kris fond of coffee?');
+
+  if (question4.toUpperCase() === 'N' || question4.toUpperCase() === 'NO') {
+    alert('Correct!');
+    document.getElementById('check4').style.display = 'inline-block';
+    tally++;
+    console.log('number of tallies', tally);
+  } else if (question4.toUpperCase() === 'Y' || question4.toUpperCase() === 'YES') {
+    alert('Incorrect');
+  } else {
+    alert('Please enter Y or N');
+  }
+  console.log('Q4 answered', question4);
 }
-console.log('Q4 answered', question4);
 
+q4();
 var question5 = prompt('Does Kris have an endless stomach?');
 
 if (question5.toUpperCase() === 'Y' || question5.toUpperCase() === 'YES') {
