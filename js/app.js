@@ -87,34 +87,57 @@ while (wrongAnswer < 4) {
 }  
     
 
-var question7 = prompt('Can you guess a country that Kris has visited?');
-//var canada = true;
-//var italy = true;
-//var netherlands = true;
-var countryList = ['canada', 'italy', 'netherlands'];
+var question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
+var canada = false;
+var italy = false;
+var netherlands = false;
+var countryList = ['canada', 'italy', 'the netherlands'];
 
-for (var attempts = 0; attempts < 6; attempts++) {
+//for (var attempts = 0; attempts < 6; attempts++) {
+   // console.log('attempt made', attempts);
+var attempts = 0;
+while (attempts <= 6 ) {
     for (var i = 0; i < countryList.length; i++) {
         if (question7 === countryList[i]) {
-            console.log ('Correctly input answer', countryList[i]);
-            alert('Yes, I have been there! I have been too Italy, The Netherlands, and Canada.' );
+            if (question7 === 'italy') {
+            alert('I have been been there!')
+            italy = true;
             break;
-        }
-        if (question7 !== countryList[i]) {
-            console.log ('Incorrect attempts', attempts);
-            alert('No, I haven\'t been there. (Yet!) Try again!');
-            question7 = prompt('Can you guess a country that Kris has visited?');
-        } else if (attempts >= 6) {
-            alert('Too bad, your out of tries... I have been to Italy, The Netherlands, and Canada.')
+        } else if (question7 === 'canada') {
+            alert('I have been been there!')
+            canada = true;
             break;
+        } else if (question7 === 'the netherlands') {
+            alert('I have been been there!')
+            netherlands = true;
+            break;
+        } 
         }
     }
-
-
-
-
+    if (italy === true || canada === true || netherlands === true) {
+        console.log('Question answered right', italy, canada, netherlands);
+        alert('I have been too Italy, The Netherlands, and Canada.');
+        break;
+    } else if (canada === false && italy === false && netherlands === false) {
+        attempts++;
+        console.log('attempt made', attempts);
+    }
 }
+//if (attempts >= 6) {
+  //  console.log('attempts limit reached', attempts);
+    //alert('Too bad, your out of tries... I have been to Italy, The Netherlands, and Canada.')
+       
+//}
+//}
 
 
 
 
+
+
+
+// if (question7 !== countryList[i]) {
+//     console.log ('Incorrect attempts', attempts);
+//     alert('No, I haven\'t been there. (Yet!) Try again!');
+//     break;
+// } 
