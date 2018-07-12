@@ -128,40 +128,46 @@ function q6() {
 
 q6();
 
+
 var question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
 var canada = false;
 var italy = false;
 var netherlands = false;
 var countryList = ['canada', 'italy', 'the netherlands'];
 
-var attempts = 0;
-while (attempts <= 6 ) {
-  for (var i = 0; i < countryList.length; i++) {
-    if (question7 === countryList[i]) {
-      if (question7 === 'italy') {
-        alert('I have been been there!');
-        italy = true;
-        break;
-      } else if (question7 === 'canada') {
-        alert('I have been been there!');
-        canada = true;
-        break;
-      } else if (question7 === 'the netherlands') {
-        alert('I have been been there!');
-        netherlands = true;
-        break;
+function q7() {
+
+  var attempts = 0;
+  while (attempts <= 6 ) {
+    for (var i = 0; i < countryList.length; i++) {
+      if (question7 === countryList[i]) {
+        if (question7 === 'italy') {
+          alert('I have been been there!');
+          italy = true;
+          break;
+        } else if (question7 === 'canada') {
+          alert('I have been been there!');
+          canada = true;
+          break;
+        } else if (question7 === 'the netherlands') {
+          alert('I have been been there!');
+          netherlands = true;
+          break;
+        }
       }
     }
-  }
-  if (italy === true || canada === true || netherlands === true) {
-    console.log('Question answered right', italy, canada, netherlands);
-    alert('I have been too Italy, The Netherlands, and Canada.');
-    break;
-  } else if (canada === false && italy === false && netherlands === false) {
-    attempts++;
-    console.log('attempt made', attempts);
+    if (italy === true || canada === true || netherlands === true) {
+      console.log('Question answered right', italy, canada, netherlands);
+      alert('I have been too Italy, The Netherlands, and Canada.');
+      break;
+    } else if (canada === false && italy === false && netherlands === false) {
+      attempts++;
+      console.log('attempt made', attempts);
+    }
   }
 }
+
+q7();
 
 
 if (tally <= 4) {
