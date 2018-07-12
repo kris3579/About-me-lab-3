@@ -29,7 +29,7 @@ if (question2.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
 }
 console.log("Q2 answered",question2);
 
-var question3 = prompt('Does Kris\'s ancestry include Native American blood?');
+var question3 = prompt('Would Kris sleep all day instead of being here if he could?');
 
 if (question3.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
     alert('Correct!');
