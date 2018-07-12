@@ -43,20 +43,24 @@ function q2() {
 q2();
 
 
+function q3() {
 
-var question3 = prompt('Would Kris sleep all day instead of being here if he could?');
+  var question3 = prompt('Would Kris sleep all day instead of being here if he could?');
 
-if (question3.toUpperCase() === 'Y' || question3.toUpperCase() === 'YES') {
-  alert('Correct!');
-  document.getElementById('check3').style.display = 'inline-block';
-  tally++;
-  console.log('number of tallies', tally);
-} else if (question3.toUpperCase() === 'N' || question3.toUpperCase() === 'NO') {
-  alert('Incorrect');
-} else {
-  alert('Please enter Y or N');
+  if (question3.toUpperCase() === 'Y' || question3.toUpperCase() === 'YES') {
+    alert('Correct!');
+    document.getElementById('check3').style.display = 'inline-block';
+    tally++;
+    console.log('number of tallies', tally);
+  } else if (question3.toUpperCase() === 'N' || question3.toUpperCase() === 'NO') {
+    alert('Incorrect');
+  } else {
+    alert('Please enter Y or N');
+  }
+  console.log('Q3 answered', question3);
 }
-console.log('Q3 answered', question3);
+
+q3();
 
 var question4 = prompt('Is Kris fond of coffee?');
 
