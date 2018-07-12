@@ -5,7 +5,9 @@
 ## Built With
 
 HTML
+
 CSS
+
 JavaScript
 
 ### Purpose
@@ -15,7 +17,9 @@ To gain compentence in loops and "if else" statements by using them to create a 
 ### Author
 
 Kris Esvelt
+
 [Github](https://github.com/kris3579)
+
 [LinkedIn](https://www.linkedin.com/in/kristianesvelt/)
 
 ### License
