@@ -106,20 +106,20 @@ function q6() {
     if (userGuess > rightAnswer) {
       wrongAnswer++;
       console.log('how many times answered wrong', wrongAnswer);
-      alert('What, thats a crazy amount of ramen!');
       if (wrongAnswer === 4) {
-        alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
+        alert('What, thats a crazy amount of ramen! \nToo bad, I guess your not on the level of Kris\'s ramen spirt.');
         break;
       }
+      alert('What, thats a crazy amount of ramen!');
       userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
     } else if (userGuess < rightAnswer) {
       wrongAnswer++;
       console.log('how many times answered wrong', wrongAnswer);
-      alert('Ramen is better than that!');
       if (wrongAnswer === 4) {
-        alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
+        alert('Ramen is better than that! \nToo bad, I guess your not on the level of Kris\'s ramen spirt.');
         break;
       }
+      alert('Ramen is better than that!');
       userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
     } else if (userGuess === rightAnswer) {
       alert('Exactly! (Maybe)');
@@ -130,13 +130,13 @@ function q6() {
     } else {
       wrongAnswer++;
       console.log('how many times answered wrong', wrongAnswer);
-      alert('You didn\'t guessed a number!');
+      if (wrongAnswer === 4) {
+        alert('You didn\'t guess a number! \nToo bad, I guess your not on the level of Kris\'s ramen spirt.');
+        break;
+      }
+      alert('You didn\'t guess a number!');
       userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
     }
-    // if (wrongAnswer === 4) {
-    //   alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
-    //   break;
-    // }
   }
 }
 
@@ -153,18 +153,19 @@ function q7() {
     if (question7 === countryList[i]) {
       rightGuess === true;
       console.log('correct', rightGuess);
-      alert('I have been been there!');
+      alert('He has been been there!');
       break;
-    } else if (rightGuess === false) {
+    } else if (question7 !== countryList[i]) {
       attempts++;
       console.log('attempts made', attempts);
-      alert('I\'ve never been there.');
-    } else if (attempts >= 6 && rightGuess === false) {
-      alert('I have been to Italy, The Netherlands, and Canada.');
-      break;
-    }
+      if (attempts >= 6) {
+        alert('Kris has never been there. \nKris has been to Italy, The Netherlands, and Canada.');
+        break;
+      }
+      alert('Kris has never been there.');
+      question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
+    } 
     console.log('attempts made', attempts);
-    question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
   }
 }
 
