@@ -144,15 +144,12 @@ q6();
 
 var question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
 var countryList = ['canada', 'italy', 'the netherlands', 'netherlands'];
-var rightGuess = false;
 var attempts = 0;
 
 function q7() {
 
   for (var i = 0; i < countryList.length; i++) {
     if (question7 === countryList[i]) {
-      rightGuess === true;
-      console.log('correct', rightGuess);
       alert('He has been been there!');
       break;
     } else if (question7 !== countryList[i]) {
@@ -164,8 +161,7 @@ function q7() {
       }
       alert('Kris has never been there.');
       question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
-    } 
-    console.log('attempts made', attempts);
+    }
   }
 }
 
