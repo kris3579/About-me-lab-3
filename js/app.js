@@ -106,11 +106,21 @@ function q6() {
     if (userGuess > rightAnswer) {
       wrongAnswer++;
       console.log('how many times answered wrong', wrongAnswer);
-      alert('What, thats a crazy amount of ramen! Try again.');
+      alert('What, thats a crazy amount of ramen!');
+      if (wrongAnswer === 4) {
+        alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
+        break;
+      }
+      userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
     } else if (userGuess < rightAnswer) {
       wrongAnswer++;
       console.log('how many times answered wrong', wrongAnswer);
-      alert('Ramen is better than that! Try again.');
+      alert('Ramen is better than that!');
+      if (wrongAnswer === 4) {
+        alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
+        break;
+      }
+      userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
     } else if (userGuess === rightAnswer) {
       alert('Exactly! (Maybe)');
       document.getElementById('check6').style.display = 'inline-block';
@@ -118,23 +128,27 @@ function q6() {
       console.log('number of tallies', tally);
       break;
     } else {
-      alert('You never guessed a number!');
+      wrongAnswer++;
+      console.log('how many times answered wrong', wrongAnswer);
+      alert('You didn\'t guessed a number!');
+      userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
     }
-    if (wrongAnswer === 4)
-      alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
+    // if (wrongAnswer === 4) {
+    //   alert('Too bad, I guess your not on the level of Kris\'s ramen spirt.');
+    //   break;
+    // }
   }
 }
 
 q6();
 
 var question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
-var countryList = ['canada', 'italy', 'the netherlands'];
+var countryList = ['canada', 'italy', 'the netherlands', 'netherlands'];
 var rightGuess = false;
 var attempts = 0;
 
 function q7() {
 
-  //while(attempts < 6) {
   for (var i = 0; i < countryList.length; i++) {
     if (question7 === countryList[i]) {
       rightGuess === true;
@@ -145,16 +159,15 @@ function q7() {
       attempts++;
       console.log('attempts made', attempts);
       alert('I\'ve never been there.');
-    } else if (attempts >= 6) {
+    } else if (attempts >= 6 && rightGuess === false) {
       alert('I have been to Italy, The Netherlands, and Canada.');
       break;
     }
+    console.log('attempts made', attempts);
+    question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
   }
-  
-//    if (attempts >= 6) {
-//      console.log('attempts limit reached', attempts);
-//      alert('I have been to Italy, The Netherlands, and Canada.');
-    
+}
+
 q7();
 
 // TOO COMPLICATED
