@@ -99,10 +99,10 @@ q5();
 //QUESTION 6
 var wrongAnswer = 0;
 var rightAnswer = 20;
+var userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
 
 function q6() {
   while (wrongAnswer < 4) {
-    var userGuess = Number(prompt('How many days a month does Kris tend abandon all self-control to spend to much money on ramen?'));
     if (userGuess > rightAnswer) {
       wrongAnswer++;
       console.log('how many times answered wrong', wrongAnswer);
@@ -128,44 +128,69 @@ function q6() {
 q6();
 
 var question7 = prompt('Can you guess a country that Kris has visited?').toLowerCase();
-var canada = false;
-var italy = false;
-var netherlands = false;
 var countryList = ['canada', 'italy', 'the netherlands'];
+var rightGuess = false;
+var attempts = 0;
 
 function q7() {
 
-  var attempts = 0;
-  while (attempts <= 6 ) {
-    for (var i = 0; i < countryList.length; i++) {
-      if (question7 === countryList[i]) {
-        if (question7 === 'italy') {
-          alert('I have been been there!');
-          italy = true;
-          break;
-        } else if (question7 === 'canada') {
-          alert('I have been been there!');
-          canada = true;
-          break;
-        } else if (question7 === 'the netherlands') {
-          alert('I have been been there!');
-          netherlands = true;
-          break;
-        }
-      }
-    }
-    if (italy === true || canada === true || netherlands === true) {
-      console.log('Question answered right', italy, canada, netherlands);
-      alert('I have been too Italy, The Netherlands, and Canada.');
+  //while(attempts < 6) {
+  for (var i = 0; i < countryList.length; i++) {
+    if (question7 === countryList[i]) {
+      rightGuess === true;
+      console.log('correct', rightGuess);
+      alert('I have been been there!');
       break;
-    } else if (canada === false && italy === false && netherlands === false) {
+    } else if (rightGuess === false) {
       attempts++;
-      console.log('attempt made', attempts);
+      console.log('attempts made', attempts);
+      alert('I\'ve never been there.');
+    } else if (attempts >= 6) {
+      alert('I have been to Italy, The Netherlands, and Canada.');
+      break;
     }
   }
-}
-
+  
+//    if (attempts >= 6) {
+//      console.log('attempts limit reached', attempts);
+//      alert('I have been to Italy, The Netherlands, and Canada.');
+    
 q7();
+
+// TOO COMPLICATED
+// function q7() {
+
+//   for (var attempts = 0; attempts <= 6; attempts++ ) {
+//     for (var i = 0; i < countryList.length; i++) {
+//       if (question7 === countryList[i]) {
+//         if (question7 === 'italy') {
+//           alert('I have been been there!');
+//           italy = true;
+//           break;
+//         } else if (question7 === 'canada') {
+//           alert('I have been been there!');
+//           canada = true;
+//           break;
+//         } else if (question7 === 'the netherlands') {
+//           alert('I have been been there!');
+//           netherlands = true;
+//           break;
+//         } else {
+//           attempts++;
+//           console.log('attempt made', attempts);
+//           prompt('Can you guess a country that Kris has visited?').toLowerCase();
+//         }
+//       }
+//     }
+//     if (italy === true || canada === true || netherlands === true) {
+//       console.log('Question answered right', italy, canada, netherlands);
+//       alert('I have been too Italy, The Netherlands, and Canada.');
+//       break;
+//     }
+//   }
+// }
+
+// q7();
 
 if (tally <= 4) {
   alert('Nice try ' + username + ' you got ' + tally + ' out of 7 questions correct.');
