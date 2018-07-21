@@ -147,7 +147,7 @@ var maxGuesses = 5;
 var breakAgain = false;
 
 function q7() {
-  for (var attempts = 0; attempts < 10; attempts++) {
+  for (var attempts = 0; attempts < 5; attempts++) {
     var question7 = prompt('Can you guess a State that Kris has visited?');
     for (var i = 0; i < countryList.length; i++) {
       if (question7.toLowerCase() === countryList[i]) {
